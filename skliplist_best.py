@@ -128,6 +128,7 @@ class Skiplist(object):
                 q = q.forward[i]
             update[i] = q
             i -= 1
+        q = update[0].forward[0]
         if q and q.key == key:
             i = 0
             while i < self.level:
